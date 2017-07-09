@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="message">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="head">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sysHeader">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="esbSystemId" type="xs:string"/>
+                    <xs:element name="esbServiceId" type="xs:string"/>
+                    <xs:element name="esbOpName" type="xs:string"/>
+                    <xs:element name="esbVersion" type="xs:string"/>
+                    <xs:element name="esbMsgTime" type="xs:string"/>
+                    <xs:element name="esbVerifiCode" type="xs:string"/>
+                    <xs:element name="esbRefGUID" type="xs:string"/>
+                    <xs:element name="transRefGUID" type="xs:string"/>
+                    <xs:element name="transNo" type="xs:string"/>
+                    <xs:element name="businessCode" type="xs:string"/>
+                    <xs:element name="businessType" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="domHeader" type="xs:string"/>
+              <xs:element name="bizHeader" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="body">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cardNo" type="xs:string"/>
+              <xs:element name="password" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
