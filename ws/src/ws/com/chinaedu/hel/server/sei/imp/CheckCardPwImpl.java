@@ -24,14 +24,6 @@ public class CheckCardPwImpl implements CheckCardPw {
 
 	private ICheckCardPwService checkCardPwServiceImpl;
 
-	public ICheckCardPwService getCheckCardPwServiceImpl() {
-		return checkCardPwServiceImpl;
-	}
-
-	public void setCheckCardPwServiceImpl(ICheckCardPwService checkCardPwServiceImpl) {
-		this.checkCardPwServiceImpl = checkCardPwServiceImpl;
-	}
-
 	@Override
 	@WebMethod(action = "checkCardPw", operationName = "checkCardPw") // 注册的方法名
 	@WebResult(name = IDocWebsConstants.websType_message)
@@ -107,5 +99,13 @@ public class CheckCardPwImpl implements CheckCardPw {
 		logger.info("checkCardPw .exeTime=" + exeTime);
 		logger.info("checkCardPw .listen end");
 		return resMStr;
+	}
+
+	public ICheckCardPwService getCheckCardPwServiceImpl() {
+		return checkCardPwServiceImpl;
+	}
+
+	public void setCheckCardPwServiceImpl(ICheckCardPwService checkCardPwServiceImpl) {
+		this.checkCardPwServiceImpl = checkCardPwServiceImpl;
 	}
 }
