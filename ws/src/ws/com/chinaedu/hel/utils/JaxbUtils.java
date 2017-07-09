@@ -11,6 +11,10 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
+/**
+ * 主要用为javaBean与xml互转的两个方法。
+ *
+ */
 public class JaxbUtils {
 	public static boolean isFormat = false;
 	/**
@@ -38,7 +42,7 @@ public class JaxbUtils {
 	 * JavaBean转换成xml
 	 * @param obj
 	 * @param encoding 
-	 * @param isFormat TODO
+	 * @param isFormat 
 	 * @return 
 	 * @throws JAXBException 
 	 */
@@ -55,7 +59,6 @@ public class JaxbUtils {
 		StringWriter writer = new StringWriter();
 		marshaller.marshal(obj, writer);
 
-//		return (writer.toString()).replaceAll("xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"", "");
 		return writer.toString();
 	}
 
