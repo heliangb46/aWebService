@@ -45,8 +45,6 @@ public class CheckCardPwImpl implements CheckCardPw {
 			String reqMVersion = reqMInfos[1];// 报文版本标识
 			// 请求报文的拦截器-----------------end-------------------
 
-			// 创建反馈报文空白结构
-			messHolder.resMes = WebsUtils.initResMByClass(messHolder.resMes.getClass());
 			// 将请求报文转化为对应的bean----------------------begin----------------------
 			try {
 				messHolder.reqMes = JaxbUtils.converyToJavaBean(message, messHolder.reqMes.getClass());
@@ -59,6 +57,9 @@ public class CheckCardPwImpl implements CheckCardPw {
 				// e.getClass().getName());
 			}
 			// 将请求报文转化为对应的bean----------------------end----------------------
+
+			// 创建反馈报文空白结构
+			messHolder.resMes = WebsUtils.initResMByClass(messHolder.resMes.getClass());
 
 			try {
 				messHolder.resMes = checkCardPwServiceImpl.doCheckCardPw(messHolder);// 根据条件更新数据库
