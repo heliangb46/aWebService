@@ -30,7 +30,8 @@ public class CheckCardPwImpl implements CheckCardPw {
 	public String checkCardPw(@WebParam(name = IDocWebsConstants.websType_message) String message) throws Exception {
 		logger.info("checkCardPw .listen start");
 		Long startTime = System.currentTimeMillis();
-		logger.debug("checkCardPw .message=" + message);
+		// logger.debug("checkCardPw .message=" + message);
+		logger.info("checkCardPw .message=" + message);
 
 		// 用于持有请求、反馈报文的对象(使用目的：防止频繁声明message pojo 对象的类型)
 		MessHolder<ws.com.chinaedu.hel.server.sei.imp.pojo.req.Message, ws.com.chinaedu.hel.server.sei.imp.pojo.res.Message> messHolder = new MessHolder<ws.com.chinaedu.hel.server.sei.imp.pojo.req.Message, ws.com.chinaedu.hel.server.sei.imp.pojo.res.Message>(
@@ -75,7 +76,8 @@ public class CheckCardPwImpl implements CheckCardPw {
 			// 拼接报文头----------------------end----------------------
 
 			resMStr = JaxbUtils.convertToXml(messHolder.resMes);
-			logger.debug("rtnMsg=" + resMStr);
+			// logger.debug("rtnMsg=" + resMStr);
+			logger.info("rtnMsg=" + resMStr);
 
 			// 反馈报文的拦截器，若中介调用（老版报文）-------------begin----------
 			if (reqMVersion.equals(IDocWebsConstants.MESVER_V1)) {

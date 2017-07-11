@@ -38,7 +38,7 @@ public class CheckCardPwServiceImpl implements ICheckCardPwService {
 			return messHolder.resMes;
 		}
 		// 如果单证存在，同时密码校验成功，返回函数默认为1；
-		messHolder.resMes.getHead().getResponse().setRelateRows("" + 1);
+		messHolder.resMes.getHead().getResponse().setRelateRows("1");
 		return messHolder.resMes;
 	}
 
