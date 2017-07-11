@@ -1,11 +1,11 @@
 <wsdl:definitions xmlns:ns1="http://schemas.xmlsoap.org/soap/http"
-	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.abchinalife.cn/Doc/CheckCardPw"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.xxxxxxxlife.cn/Doc/CheckCardPw"
 	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	name="CheckCardPwImplService" targetNamespace="http://ws.abchinalife.cn/Doc/CheckCardPw">
+	name="CheckCardPwImplService" targetNamespace="http://ws.xxxxxxxlife.cn/Doc/CheckCardPw">
 	<wsdl:types>
-		<xs:schema xmlns:tns="http://ws.abchinalife.cn/Doc/CheckCardPw"
+		<xs:schema xmlns:tns="http://ws.xxxxxxxlife.cn/Doc/CheckCardPw"
 			xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified"
-			targetNamespace="http://ws.abchinalife.cn/Doc/CheckCardPw" version="1.0">
+			targetNamespace="http://ws.xxxxxxxlife.cn/Doc/CheckCardPw" version="1.0">
 			<xs:element name="checkCardPw" type="tns:checkCardPw" />
 			<xs:element name="checkCardPwResponse" type="tns:checkCardPwResponse" />
 			<xs:complexType name="checkCardPw">
