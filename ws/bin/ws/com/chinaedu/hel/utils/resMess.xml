@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<message>
+	<head>
+		<response>
+			<relateRows>0</relateRows>
+			<businessRespCode>01</businessRespCode>
+			<businessRespText>卡单密码不正确</businessRespText>
+		</response>
+	</head>
+	<body />
+</message>

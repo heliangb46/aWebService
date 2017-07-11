@@ -1,0 +1,25 @@
+{
+	"reqMes": {
+		"body": {
+			"cardNo": "010110",
+			"password": "101011"
+		},
+		"head": {
+			"sysHeader": {
+				
+			}
+		}
+	},
+	"resMes": {
+		"body": {
+			
+		},
+		"head": {
+			"response": {
+				"businessRespCode": "01",
+				"businessRespText": "卡单密码不正确",
+				"relateRows": "0"
+			}
+		}
+	}
+}
