@@ -21,8 +21,8 @@ public class WebsUtils {
 	public static Object getOneValueByGetterName(Object thisObj, String getMethodName) throws IllegalArgumentException,
 			IllegalAccessException, InvocationTargetException, SecurityException, NoSuchMethodException {
 		Class<?> thisObjClass = thisObj.getClass();
-		Method getter = thisObjClass.getMethod(getMethodName, null);
-		Object val = getter.invoke(thisObj, null);
+		Method getter = thisObjClass.getMethod(getMethodName);
+		Object val = getter.invoke(thisObj);
 		return val;
 	}
 
@@ -47,7 +47,7 @@ public class WebsUtils {
 	 * @throws NoSuchMethodException
 	 * @throws ClassNotFoundException
 	 */
-	public static <T extends Class<?>, R> R initReqMByClass(T reqMByClass)
+	public static <R> R initReqMByClass(Class<?> reqMByClass)
 			throws InstantiationException, IllegalAccessException, IllegalArgumentException, SecurityException,
 			InvocationTargetException, NoSuchMethodException, ClassNotFoundException {
 		Object of = getMessFactoryByMessClass(reqMByClass);
@@ -65,6 +65,7 @@ public class WebsUtils {
 	 * @throws InvocationTargetException
 	 * @throws NoSuchMethodException
 	 */
+	@SuppressWarnings("unchecked")
 	public static <R> R getReqMByFactory(Object of) throws IllegalArgumentException, SecurityException,
 			IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		Object reqM = WebsUtils.getOneValueByGetterName(of, "createMessage");
@@ -91,7 +92,7 @@ public class WebsUtils {
 	 * @throws IllegalAccessException
 	 * @throws ClassNotFoundException
 	 */
-	private static <T extends Class<?>> Object getMessFactoryByMessClass(T reqMessClass)
+	private static Object getMessFactoryByMessClass(Class<?> reqMessClass)
 			throws InstantiationException, IllegalAccessException, ClassNotFoundException {
 		return Class.forName(reqMessClass.getPackage().getName() + ".ObjectFactory").newInstance();
 	}
