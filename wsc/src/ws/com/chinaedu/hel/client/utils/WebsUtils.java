@@ -31,7 +31,7 @@ public class WebsUtils {
 			NoSuchMethodException {
 		Class<?> messObjClass = messObj.getClass();
 		Method setter = messObjClass.getMethod(setMethodName, val.getClass());
-		setter.invoke(messObj, (val.getClass()).cast(val));
+		setter.invoke(messObj, val);
 	}
 
 	/**
