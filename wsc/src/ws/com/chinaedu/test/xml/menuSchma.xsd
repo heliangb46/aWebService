@@ -10,60 +10,42 @@
 			<xs:element name="menu" maxOccurs="unbounded">
 				<xs:complexType>
 					<xs:sequence>
-					
+
 						<xs:element name="parentCode">
 							<xs:complexType>
 								<xs:attribute name="value" type="xs:integer" use="required" />
 							</xs:complexType>
 						</xs:element>
+
+						<xs:element name="info">
+							<xs:complexType>
+								<xs:attribute name="name" type="xs:string" use="required" />
+								<xs:attribute name="code" type="xs:integer" use="required" />
+								<xs:attribute name="depth" type="xs:integer" use="required" />
+								<xs:attribute name="sequence" type="xs:integer" use="required" />
+								<xs:attribute name="state" type="xs:integer" use="required" />
+								
+							</xs:complexType>
+						</xs:element>
+
+						<xs:element name="icon" minOccurs="0">
+							<xs:complexType>
+								<xs:attribute name="value" type="xs:string" />
+							</xs:complexType>
+						</xs:element>
+
+						<xs:element name="url" minOccurs="0">
+							<xs:complexType>
+								<xs:attribute name="value" type="xs:string" />
+							</xs:complexType>
+						</xs:element>
+
+						<xs:element name="remark" minOccurs="0">
+							<xs:complexType>
+								<xs:attribute name="value" type="xs:string" />
+							</xs:complexType>
+						</xs:element>
 						
-                        <xs:element name="code">
-                            <xs:complexType>
-                                <xs:attribute name="value" type="xs:integer" use="required" />
-                            </xs:complexType>
-                        </xs:element>
-                        
-                        <xs:element name="name">
-                            <xs:complexType>
-                                <xs:attribute name="value" type="xs:string" use="required" />
-                            </xs:complexType>
-                        </xs:element>
-                        
-                        <xs:element name="icon">
-                            <xs:complexType>
-                                <xs:attribute name="value" type="xs:string" />
-                            </xs:complexType>
-                        </xs:element>
-                        
-                        <xs:element name="url">
-                            <xs:complexType>
-                                <xs:attribute name="value" type="xs:string" />
-                            </xs:complexType>
-                        </xs:element>
-                        
-                        <xs:element name="depth">
-                            <xs:complexType>
-                                <xs:attribute name="value" type="xs:integer" use="required" />
-                            </xs:complexType>
-                        </xs:element>
-                        
-                        <xs:element name="sequence">
-                            <xs:complexType>
-                                <xs:attribute name="value" type="xs:integer" use="required" />
-                            </xs:complexType>
-                        </xs:element>
-                        
-                        <xs:element name="remark">
-                            <xs:complexType>
-                                <xs:attribute name="value" type="xs:string" />
-                            </xs:complexType>
-                        </xs:element>
-						
-                        <xs:element name="state">
-                            <xs:complexType>
-                                <xs:attribute name="value" type="xs:integer" use="required" />
-                            </xs:complexType>
-                        </xs:element>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
