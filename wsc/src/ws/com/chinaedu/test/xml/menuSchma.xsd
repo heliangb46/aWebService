@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.chinaedu.net/menuSchma" xmlns:cedu="http://www.chinaedu.net/menuSchma"
+	elementFormDefault="qualified">
+
+	<xs:element name="menus" type="cedu:menuList" />
+
+	<xs:complexType name="menuList">
+		<xs:sequence>
+			<xs:element name="menu" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+					
+						<xs:element name="parentCode">
+							<xs:complexType>
+								<xs:attribute name="value" type="xs:integer" use="required" />
+							</xs:complexType>
+						</xs:element>
+						
+                        <xs:element name="code">
+                            <xs:complexType>
+                                <xs:attribute name="value" type="xs:integer" use="required" />
+                            </xs:complexType>
+                        </xs:element>
+                        
+                        <xs:element name="name">
+                            <xs:complexType>
+                                <xs:attribute name="value" type="xs:string" use="required" />
+                            </xs:complexType>
+                        </xs:element>
+                        
+                        <xs:element name="icon">
+                            <xs:complexType>
+                                <xs:attribute name="value" type="xs:string" />
+                            </xs:complexType>
+                        </xs:element>
+                        
+                        <xs:element name="url">
+                            <xs:complexType>
+                                <xs:attribute name="value" type="xs:string" />
+                            </xs:complexType>
+                        </xs:element>
+                        
+                        <xs:element name="depth">
+                            <xs:complexType>
+                                <xs:attribute name="value" type="xs:integer" use="required" />
+                            </xs:complexType>
+                        </xs:element>
+                        
+                        <xs:element name="sequence">
+                            <xs:complexType>
+                                <xs:attribute name="value" type="xs:integer" use="required" />
+                            </xs:complexType>
+                        </xs:element>
+                        
+                        <xs:element name="remark">
+                            <xs:complexType>
+                                <xs:attribute name="value" type="xs:string" />
+                            </xs:complexType>
+                        </xs:element>
+						
+                        <xs:element name="state">
+                            <xs:complexType>
+                                <xs:attribute name="value" type="xs:integer" use="required" />
+                            </xs:complexType>
+                        </xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
